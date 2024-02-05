@@ -40,19 +40,19 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="relative my-12 grid gap-4 py-24 md:my-12 md:grid-cols-2"
     >
       {/* <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
       <div className="z-10 ">
-        <h5 className="text-xl font-bold text-white my-2">
+        <h5 className="my-2 text-xl font-bold text-white">
         Contactez-moi pour collaborer
         </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <p className="mb-4 max-w-md text-[#ADB7BE]">
           {" "}
           Je suis intéressé par les opportunités de freelance, en particulier projet ambitieux ou de grande envergure. Toutefois, si vous avez d&apos;autres demandes ou question, n&apos;hésitez pas à me contacter en utilisant le formulaire ci-dessous Soit en m&apos;envoyant un mail à l&apos;adresse israelokito88@gmail.com
         </p>
         <div 
-           className="  text-white animate-bounce flex justify-center"
+           className="  flex animate-bounce justify-center text-white"
         >
          <Image src="/message.png" 
          alt="contact email" 
@@ -67,7 +67,7 @@ const Contact = () => {
       </div>
       <div>
         {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
+          <p className="mt-2 text-sm text-green-500">
             l&apos;email a été envoyé avec succès
           </p>
         ) : (
@@ -75,7 +75,7 @@ const Contact = () => {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="text-white block mb-2 text-sm font-medium"
+                className="mb-2 block text-sm font-medium text-white"
               >
                 Ton email
               </label>
@@ -84,14 +84,15 @@ const Contact = () => {
                 type="email"
                 id="email"
                 required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
+                className="block w-full rounded-lg border border-[#33353F] bg-[#18191E] p-2.5 text-sm text-gray-100 placeholder-[#9CA2A9]"
                 placeholder="okito@gmail.com"
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="subject"
-                className="text-white block text-sm mb-2 font-medium"
+                className="mb-2 block text-sm font-medium text-white"
               >
                 Sujet
               </label>
@@ -100,27 +101,27 @@ const Contact = () => {
                 type="text"
                 id="subject"
                 required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="block w-full rounded-lg border border-[#33353F] bg-[#18191E] p-2.5 text-sm text-gray-100 "
                 placeholder="votre sujet..."
               />
             </div>
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="text-white block text-sm mb-2 font-medium"
+                className="mb-2 block text-sm font-medium text-white"
               >
                 Message
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                className="block w-full rounded-lg border border-[#33353F] bg-[#18191E] p-2.5 text-sm text-gray-100 "
                 placeholder=""
               />
             </div>
             <button
               type="submit"
-              className=" text-white bg-purple-500 hover:bg-purple-800 font-medium py-2.5 px-5 rounded-lg w-full"
+              className=" w-full rounded-lg bg-purple-500 px-5 py-2.5 font-medium text-white hover:bg-purple-800"
             >
               Envoyer le Message
             </button>

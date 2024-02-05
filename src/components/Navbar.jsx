@@ -1,9 +1,8 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
-// import NavLink from "./NavLink";
+import React from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-// import MenuOverlay from "./MenuOverlay";
 import {
     Sheet,
     SheetClose,
@@ -37,28 +36,28 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100 ">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+    // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
+    <nav className="fixed inset-x-0 top-0 z-50 mx-auto border border-[#33353F] bg-[#121212] bg-opacity-100 ">
+      <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2 lg:py-4">
         <Link
           href={"/"}
-          className=" text-white font-semibold"
+          className=" font-semibold text-white"
         >
           <Image src="/dev.png" alt="logo dev" width={50} height={1} />
         </Link>
 
-        <div className="mobile-menu text-white block md:hidden">
+        <div className="mobile-menu block text-white md:hidden">
 
           <Sheet>
                <SheetTrigger asChild>
                   <button
                     id="buttonMenu"
                     title="Menu"
-                    className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+                    className="flex items-center rounded border border-slate-200 px-3 py-2 text-slate-200 hover:border-white hover:text-white"
                   >
-                     <Bars3Icon className="h-5 w-5" />
+                     <Bars3Icon className="size-5" />
                   </button>
                </SheetTrigger>
                <SheetContent >
@@ -67,10 +66,10 @@ const Navbar = () => {
                  </SheetDescription>
                      <div className="mb-5">
                      {navLinks.map((link, index) => (
-                        <li key={index} className="list-none mt-3  border-b-2 border-slate-100 hover:text-slate-200">
+                        <li key={index} className="mt-3 list-none  border-b-2 border-slate-100 hover:text-slate-200">
                       
                           <Link href={link.path}>
-                             <p className="py-2 pl-3 pr-4  text-black sm:text-xl rounded md:p-0 hover:text-slate-800 cursor-pointer">{link.title}</p>
+                             <p className="cursor-pointer rounded py-2  pl-3 pr-4 text-black hover:text-slate-800 sm:text-xl md:p-0">{link.title}</p>
                           </Link>
                           
                         
@@ -82,7 +81,7 @@ const Navbar = () => {
                  <SheetFooter>
                    <SheetClose asChild>
                      <Link href="#contact">
-                        <button id="buttonContact" title="Contact" type="submit" className="bg-black text-lg text-white p-3 rounded ">Contact</button>
+                        <button id="buttonContact" title="Contact" type="submit" className="rounded bg-black p-3 text-lg text-white ">Contact</button>
                      </Link>
                    </SheetClose>
                  </SheetFooter>
@@ -90,17 +89,17 @@ const Navbar = () => {
           </Sheet>
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="mt-0 flex p-4 md:flex-row md:space-x-8 md:p-0">
             {navLinks.map((link, index) => (
               <li key={index}>
              
                  <Link href={link.path}>
-                    <p className="py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white cursor-pointer">{link.title}</p>
+                    <p className="cursor-pointer rounded py-2 pl-3 pr-4 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0">{link.title}</p>
                  </Link>
               </li>
             ))}
             <li>
-                <Link href="#contact" className=" bg-purple-500 hover:bg-purple-800 text-lg text-white px-8 py-2 rounded">Contact</Link>
+                <Link href="#contact" className=" rounded bg-purple-500 px-8 py-2 text-lg text-white hover:bg-purple-800">Contact</Link>
             </li>
           </ul>
         </div>

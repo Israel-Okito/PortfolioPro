@@ -1,28 +1,22 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 "use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Accueil = () => {
   return (
     <section className="lg:py-16 ">
-      <div className=' mix-blend-difference static '>
+      <div className=' static mix-blend-difference '>
               <Image src="/bg-3.jpg" alt="escalator image" fill priority={true} />
        </div>
-      <div className="grid grid-cols-1 sm:grid-cols-12 relative">
+      <div className="relative grid grid-cols-1 sm:grid-cols-12">
         <div
-          // initial={{ opacity: 0, scale: 0.6 }}
-          // animate={{ opacity: 1, scale: 0.8 }}
-          // transition={{ duration: 0.3 }}
-          // initial={{ opacity: 0, scale: 0.6}}
-          // animate={{ opacity: 1, scale: 1 }}
-          // transition={{ duration: 0.3 }}
-          className="col-span-8 place-self-center text-center sm:text-left pr-10 justify-self-start"
+          className="col-span-8 place-self-center justify-self-start pr-10 text-center sm:text-left"
         >
-          <h1 className="text-white mb-4 text-xl sm:text-2xl lg:text-4xl lg:leading-normal font-extrabold">
-            <span className="text-transparent  bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-500 bg-inherit from-purple-400 to-teal-500">
+          <h1 className="mb-4 text-xl font-extrabold text-white sm:text-2xl lg:text-4xl lg:leading-normal">
+            <span className="from-primary-400  to-secondary-500 bg-inherit bg-gradient-to-r from-purple-400 to-teal-500 bg-clip-text text-transparent">
               salut je suis{" "}
             </span>
             <br></br>
@@ -38,13 +32,13 @@ const Accueil = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base z-999 sm:text-lg mb-6 lg:text-xl">
+          <p className="z-[999] mb-6 text-base text-[#ADB7BE] sm:text-lg lg:text-xl">
              Je crée des sites web sur mesure pour magnifier votre présence en ligne, offrant une expérience web captivante et mémorable. 
           </p>
           <div>
             <Link
                href="#contact"
-              className="px-6 inline-block cursor-pointer py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-purple-500 to-black hover:bg-slate-200 text-white"
+              className="mr-4 inline-block w-full cursor-pointer rounded-full bg-gradient-to-br from-purple-500 to-black px-6 py-3 text-white hover:bg-slate-200 sm:w-fit"
             >
              Contactez moi
             </Link>
@@ -56,9 +50,9 @@ const Accueil = () => {
                href="/cv.pdf"  
                locale={false}
                 download
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-teal-500 hover:bg-slate-900 text-white mt-3"
+              className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-purple-500 to-teal-500 p-1 text-white hover:bg-slate-900 sm:w-fit"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800">
                 Télécharger mon CV
               </span>
             </Link>
@@ -73,13 +67,13 @@ const Accueil = () => {
               // initial={{ opacity: 0, scale: 0.5 }}
               // animate={{ opacity: 1, scale: 1 }}
               // transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 mt-4 place-self-center lg:mt-0"
         >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="relative size-[250px] rounded-full bg-[#181818] lg:size-[400px]">
             <Image
               src="/moi.png"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
               width={300}
               height={300}
             />

@@ -1,12 +1,6 @@
-// import { Inter } from 'next/font/google'
+
 import './globals.css'
-import { GrInstagram } from "react-icons/gr";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import Link from 'next/link';
-
-
-// const inter = Inter({ subsets: ['latin'] })
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Portfolio Développeur Web | Expert Front-end | Projets Innovants',
@@ -44,6 +38,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='m-0 bg-black '>
          {children}
+         <SpeedInsights />
       </body>
     </html>
   )

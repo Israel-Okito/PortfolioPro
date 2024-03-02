@@ -3,13 +3,14 @@ import './globals.css'
 import { GrInstagram } from "react-icons/gr";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import Link from 'next/link';
 
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Portfolio Développeur Web | Expert Front-end | Projets Innovants',
-  description: "Découvrez le portfolio d'un développeur web passionné. Expert en développement front-end, spécialisé en HTML, CSS, JavaScript et d'autres frameworks. Explorez des projets innovants et engagez-vous pour des expériences web exceptionnelles.",
+  description: "Découvrez le portfolio d'un développeur web passionné. Expert en développement front-end, spécialisé en HTML, CSS, JavaScript et d'autres frameworks comme Nextjs et Reactjs. Explorez des projets innovants et engagez-vous pour des expériences web exceptionnelles.",
   // manifest: 'http://localhost:3001',
   url: 'https://okito.vercel.app',
   generator: 'Next.js',
@@ -41,12 +42,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='m-0 bg-black '>
-        <div className='fixed left-0 top-[70%] flex flex-col gap-2 p-1 text-xl text-white'>
-           <p className='rounded-full bg-white p-2 text-red-400 shadow-2xl' ><GrInstagram /></p >
-           <p className='rounded-full bg-white p-2 text-black shadow-2xl' ><FaGithub/></p >
-           <p className='rounded-full bg-white p-2 text-blue-500 shadow-2xl' ><FaLinkedin/></p>
-        </div>
-        {children}
+         {children}
       </body>
     </html>
   )

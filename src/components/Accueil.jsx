@@ -4,10 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
+import { Meteors } from "./ui/meteors";
+import { FaGithub } from "react-icons/fa";
 
 const Accueil = () => {
   return (
     <section className="lg:py-16 ">
+         {/* Meaty part - Meteor effect */}
+         <Meteors number={50} />
       <div className=' static mix-blend-difference '>
               <Image src="/bg-3.jpg" alt="escalator image" fill priority={true} />
        </div>
@@ -56,6 +60,14 @@ const Accueil = () => {
                 Télécharger mon CV
               </span>
             </Link>
+            <div className='fixed left-0 top-[70%] flex flex-col gap-2 p-1 text-xl text-white'>
+              {/* <p className='rounded-full bg-white p-2 text-red-400 shadow-2xl' ><GrInstagram />
+                 </p > */}
+           <Link  className='z-[999] animate-bounce cursor-pointer rounded-full bg-white p-2 text-black shadow-2xl' href="https://github.com/Israel-Okito">
+             <FaGithub/>
+           </Link>
+              {/* <p className='rounded-full bg-white p-2 text-blue-500 shadow-2xl' ><FaLinkedin/></p> */}
+        </div>
           </div>
         </div>
 

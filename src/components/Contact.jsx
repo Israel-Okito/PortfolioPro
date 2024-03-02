@@ -1,40 +1,60 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
 
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const data = {
+  //     email: e.target.email.value,
+  //     subject: e.target.subject.value,
+  //     message: e.target.message.value,
+  //   };
+  //   const JSONdata = JSON.stringify(data);
+  //   const endpoint = "/api/sendEmail";
+
+  //   // Form the request for sending data to the server.
+  //   const options = {
+  //     // The method is POST because we are sending data.
+  //     method: "POST",
+  //     // Tell the server we're sending JSON.
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     // Body of the request is the JSON data we created above.
+  //     body: JSONdata,
+  //   };
+
+  //   const response = await fetch(endpoint, options);
+  //   const resData = await response.json();
+
+  //   if (response.status === 200) {
+  //     console.log("Message envoyer");
+  //     setEmailSubmitted(true);
+  //   }
+  // };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    };
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/sendEmail";
 
-    // Form the request for sending data to the server.
-    const options = {
-      // The method is POST because we are sending data.
-      method: "POST",
-      // Tell the server we're sending JSON.
-      headers: {
-        "Content-Type": "application/json",
-      },
-      // Body of the request is the JSON data we created above.
-      body: JSONdata,
-    };
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if (response.status === 200) {
-      console.log("Message envoyer");
-      setEmailSubmitted(true);
-    }
+    emailjs 
+      .sendForm( "service_ci19m7s", "template_ao4cjfd" , form.current, {
+        publicKey: "wbX81KeKtBFIM5zfv",
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
   };
 
   return (
@@ -71,7 +91,7 @@ const Contact = () => {
             l&apos;email a été envoyé avec succès
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col" ref={form} onSubmit={sendEmail}>
             <div className="mb-6">
               <label
                 htmlFor="email"

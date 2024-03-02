@@ -26,6 +26,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
+   icons: [{ rel: "icon", url: "/favicon.ico" }],
   // icons: {
   //   icon: '/dev.png',
   //   shortcut: '/dev.png',

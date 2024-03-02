@@ -10,12 +10,12 @@ import { FaGithub } from "react-icons/fa";
 const Accueil = () => {
   return (
     <section className="lg:py-16 ">
-         {/* Meaty part - Meteor effect */}
-         <Meteors number={50} />
+       
       <div className=' static mix-blend-difference '>
-              <Image src="/bg-3.jpg" alt="escalator image" fill priority={true} />
-       </div>
-      <div className="relative grid grid-cols-1 sm:grid-cols-12">
+          <Image src="/bg-3.jpg" alt="escalator image" fill priority={true} />
+      </div>
+
+      <div className="relative grid grid-cols-1 overflow-hidden sm:grid-cols-12">
         <div
           className="col-span-8 place-self-center justify-self-start pr-10 text-center sm:text-left"
         >
@@ -92,7 +92,16 @@ const Accueil = () => {
             
           </div>
         </div>
+
+
+          {/* Meaty part - Meteor effect */}
+          <Meteors number={20} />
+        
+
+    
       </div>
+
+
     </section>
   );
 };

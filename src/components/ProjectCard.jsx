@@ -65,7 +65,10 @@ const ProjectCard = ({ imgUrl,  techno, title, description, gitUrl, previewUrl, 
                         </Link> */}
 
                         {previewUrl ? (
-                           <Link href={previewUrl}>
+                           <Link href={previewUrl}
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           >
                              <button className="flex items-center gap-2 rounded bg-purple-500 p-4 text-white hover:bg-purple-800">
                                <EyeIcon className="w-5 text-white" />
                                voir le projet
@@ -88,8 +91,8 @@ const ProjectCard = ({ imgUrl,  techno, title, description, gitUrl, previewUrl, 
 
 
 
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h1 className="text-xl font-semibold mb-2">{title}</h1>
+      <div className="bg-[#181818]py-6 mt-3 rounded-b-xl px-4 text-white">
+        <h1 className="mb-2 text-xl font-semibold">{title}</h1>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>
     </div>

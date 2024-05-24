@@ -3,6 +3,11 @@ import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
 import { RiDoubleQuotesL} from "react-icons/ri";
+import { IoLogoJavascript } from "react-icons/io5";
+import { TbBrandNextjs } from "react-icons/tb";
+import { GrReactjs } from "react-icons/gr";
+import { SiSanity, SiTailwindcss } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
 
 const TAB_DATA = [
   {
@@ -10,13 +15,13 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>JavaScript</li>
-        <li>React.js</li>
-        <li>Next.js</li>
-        <li>prisma</li>
-        <li>css</li>
-        <li>tailwind</li>
-        <li>sass</li>
+        <li className="flex items-center gap-2">JavaScript<IoLogoJavascript className="bg-yellow-300" /></li>
+        <li className="flex items-center gap-2">Next.js<TbBrandNextjs className=" text-black " /></li>
+        <li className="flex items-center gap-2">React.js <GrReactjs className="text-blue-500" /></li>
+        <li className="flex items-center gap-2">Sanity.io <SiSanity className="text-orange-600" /></li>
+        <li className="flex items-center gap-2">Prisma (ORM) <SiPrisma /></li>
+        <li className="flex items-center gap-2">Tailwind css<SiTailwindcss className="text-blue-500" /></li>
+        
        
       </ul>
     ),
@@ -31,16 +36,7 @@ const TAB_DATA = [
       </ul>
     ),
   },
-  // {
-  //   title: "Certifications",
-  //   id: "certifications",
-  //   content: (
-  //     <ul className="list-disc pl-2">
-  //       <li>AWS Cloud Practitioner</li>
-  //       <li>Google Professional Cloud Developer</li>
-  //     </ul>
-  //   ),
-  // },
+
 ];
 
 const About = () => {
@@ -69,7 +65,7 @@ const About = () => {
             priority  
           />
         <div className="mt-4 flex h-full flex-col text-left md:mt-0">
-          <h2 className="mb-4 text-3xl  font-bold">A propos de Moi</h2>
+          <h2 className="mb-4 text-3xl  font-bold">À propos de Moi</h2>
           <p className="text-base lg:text-lg">
               je suis un développeur web front-end basé à tunis en Tunisie . Je développe des applications Web complètes, 
              <span className="flex font-bold text-purple-900"><RiDoubleQuotesL/>Chaque grand design commence par une histoire encore meilleure.</span>

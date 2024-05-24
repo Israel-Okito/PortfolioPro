@@ -79,11 +79,11 @@ const Accueil = () => {
               // initial={{ opacity: 0, scale: 0.5 }}
               // animate={{ opacity: 1, scale: 1 }}
               // transition={{ duration: 0.5 }}
-          className="col-span-4 mt-4 place-self-center lg:mt-0"
+          className="col-span-4 mt-4 place-self-center     lg:mt-0 "
         >
-          <div className="relative size-[250px] rounded-full bg-[#181818] lg:size-[400px]">
+          <div className="relative size-[250px] rounded-full border-2   bg-gradient-to-br from-purple-500 to-teal-500 lg:size-[400px] ">
             <Image
-              src="/moi.png"
+              src="/isael1.png"
               alt="hero image"
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
               width={300}

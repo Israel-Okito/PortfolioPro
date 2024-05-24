@@ -12,7 +12,7 @@ const Footer = () => {
         >
           <Image src="/dev.png" alt="logo dev" width={50} height={50} />
         </Link>
-        <p className="text-slate-400">Copyright &copy; 2024 développer par Okito</p>
+        <p className="text-slate-400">Copyright &copy; {new Date().getFullYear()} développer par Okito</p>
       </div>
     </footer>
   );

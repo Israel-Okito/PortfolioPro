@@ -96,7 +96,7 @@ const Navbar = () => {
               </li>
             ))}
             <li className="cursor-pointer rounded py-2 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0">
-               <a href="https://okitdev.com" target="_blank" rel="noopener noreferrer">
+               <a href="https://www.okitdev.com" target="_blank" rel="noopener noreferrer">
                  Blog
                </a>
             </li>

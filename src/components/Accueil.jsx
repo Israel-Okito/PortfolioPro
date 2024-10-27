@@ -47,7 +47,7 @@ const Accueil = () => {
              Contactez moi
             </Link>
 
-            <Link
+            <a
               alt="alt text"
               target="_blank"
               rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const Accueil = () => {
               <span className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800">
                 Télécharger mon CV
               </span>
-            </Link>
+            </a>
             <div className='fixed left-0 top-[70%] flex flex-col gap-2 p-1 text-xl text-white'>
               {/* <p className='rounded-full bg-white p-2 text-red-400 shadow-2xl' ><GrInstagram />
                  </p > */}

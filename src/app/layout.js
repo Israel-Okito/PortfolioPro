@@ -10,21 +10,18 @@ export const metadata = {
   generator: 'Next.js',
   applicationName: 'Next.js',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Next.js', 'React', 'JavaScript', 'Framer motion', 'AOS', 'Tailwindcss'],
+  keywords: ['Next.js', 'okito.vercel.app', 'okito', 'okito diesho', 'React', 'JavaScript', 'frontend développeur', 'developper web ', 'Tailwindcss'],
   authors: [{ name: 'Israel' }, { name: 'Okito' , url: 'https://okito.vercel.app'
  }],
-  creator: 'Israel okito',
-  publisher: 'Israel Okito',
+  creator: ' okito diesho',
+  publisher: ' Okito diesho',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
    icons: [{ rel: "icon", url: "/favicon.ico" }],
-  // icons: {
-  //   icon: '/dev.png',
-  //   shortcut: '/dev.png',
-  // }
+
 }
 
 export const viewport = {

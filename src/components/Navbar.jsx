@@ -29,10 +29,7 @@ const navLinks = [
     title: "A propos",
     path: "#propos",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
+
 ];
 
 const Navbar = () => {
@@ -98,6 +95,11 @@ const Navbar = () => {
                  </Link>
               </li>
             ))}
+            <li className="cursor-pointer rounded py-2 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0">
+               <a href="https://okitdev.com" target="_blank" rel="noopener noreferrer">
+                 Blog
+               </a>
+            </li>
             <li>
                 <Link href="#contact" className=" rounded bg-purple-500 px-8 py-2 text-lg text-white hover:bg-purple-800">Contact</Link>
             </li>

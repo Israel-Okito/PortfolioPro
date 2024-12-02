@@ -73,6 +73,11 @@ const Navbar = () => {
                         </li>
                         
                       ))}
+                        <li className="cursor-pointer rounded py-2 list-none pl-3 decoration-transparent text-black hover:text-slate-800 sm:text-xl md:p-0">
+                           <a href="https://www.okitdev.com" target="_blank" rel="noopener noreferrer">
+                             Blog
+                           </a>
+                        </li>
                      </div>
                 
                  <SheetFooter>

@@ -17,9 +17,9 @@ const Accueil = () => {
 
       <div className="relative grid grid-cols-1 overflow-hidden sm:grid-cols-12">
         <div
-          className="col-span-8 place-self-center justify-self-start pr-10 text-center sm:text-left"
+          className="col-span-8 place-self-center justify-self-start pr-2 text-center sm:pr-10 sm:text-left"
         >
-          <h1 className="mb-4 text-xl font-extrabold text-white sm:text-2xl lg:text-4xl lg:leading-normal">
+          <h1 className="mb-4 text-2xl font-extrabold  text-white  sm:text-3xl md:text-4xl lg:text-4xl lg:leading-normal">
             <span className="from-primary-400  to-secondary-500 bg-inherit bg-gradient-to-r from-purple-400 to-teal-500 bg-clip-text text-transparent">
               salut je suis{" "}
             </span>
@@ -52,7 +52,7 @@ const Accueil = () => {
               target="_blank"
               rel="noopener noreferrer"
                href="/cv.pdf"  
-               locale={false}
+              //  locale={false}
                 download
               className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-purple-500 to-teal-500 p-1 text-white hover:bg-slate-900 sm:w-fit"
             >

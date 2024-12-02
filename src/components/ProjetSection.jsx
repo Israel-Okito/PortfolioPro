@@ -103,7 +103,7 @@ function ProjetSection() {
            </p>
         </div>
 
-        <div className='p-10'>
+        <div className='py-10 px-2 sm:p-10'>
         <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
         {projectsData.map((project, index) => (
           <motion.li

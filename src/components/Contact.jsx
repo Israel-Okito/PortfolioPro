@@ -2,41 +2,13 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
 
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const data = {
-  //     email: e.target.email.value,
-  //     subject: e.target.subject.value,
-  //     message: e.target.message.value,
-  //   };
-  //   const JSONdata = JSON.stringify(data);
-  //   const endpoint = "/api/sendEmail";
-
-  //   // Form the request for sending data to the server.
-  //   const options = {
-  //     // The method is POST because we are sending data.
-  //     method: "POST",
-  //     // Tell the server we're sending JSON.
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     // Body of the request is the JSON data we created above.
-  //     body: JSONdata,
-  //   };
-
-  //   const response = await fetch(endpoint, options);
-  //   const resData = await response.json();
-
-  //   if (response.status === 200) {
-  //     console.log("Message envoyer");
-  //     setEmailSubmitted(true);
-  //   }
-  // };
+  const { toast } = useToast()
 
   const form = useRef();
 
@@ -49,7 +21,11 @@ const Contact = () => {
       })
       .then(
         (result) => {
-          console.log(result.text);
+          toast({
+            title: "merci d'avoir envoyé un email à okito, vous allez recevoir un retour dans quelques minutes ",
+            
+            
+          })
         },
         (error) => {
           console.log(error.text);
@@ -85,6 +61,7 @@ const Contact = () => {
         
         </div>
       </div>
+
       <div>
         {emailSubmitted ? (
           <p className="mt-2 text-sm text-green-500">
@@ -148,6 +125,7 @@ const Contact = () => {
           </form>
         )}
       </div>
+
     </section>
   );
 };

@@ -1,6 +1,7 @@
 
+import { Toaster } from '@/components/ui/toaster';
 import './globals.css'
-import { SpeedInsights } from '@vercel/speed-insights/next';
+// import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
   title: 'Portfolio Développeur Web | Expert Front-end | Projets Innovants',
@@ -35,7 +36,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='m-0 bg-black '>
          {children}
-         <SpeedInsights />
+         {/* <SpeedInsights /> */}
+         <Toaster/>
       </body>
     </html>
   )

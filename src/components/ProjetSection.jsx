@@ -88,9 +88,9 @@ function ProjetSection() {
   };
   
   return (
-    <section id='projet' className="mt-20">
+    <section id='projet' className="mt-20" >
  
-        <div className='z-10  '>
+        <div className='z-10  ' data-aos="zoom-in-down">
     
            <h1 className="mb-8 mt-20 text-center text-4xl font-bold text-white md:mb-12">
               Mes derniers <span className='text-purple-500'>projets</span>
@@ -103,7 +103,7 @@ function ProjetSection() {
            </p>
         </div>
 
-        <div className='py-10 px-2 sm:p-10'>
+        <div className='py-10 px-2 sm:p-10' data-aos="fade-right">
         <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
         {projectsData.map((project, index) => (
           <motion.li

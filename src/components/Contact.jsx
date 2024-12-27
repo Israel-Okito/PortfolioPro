@@ -1,12 +1,11 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
 
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const { toast } = useToast()
 
@@ -37,6 +36,7 @@ const Contact = () => {
     <section
       id="contact"
       className="relative my-12 grid gap-4 py-24 md:my-12 md:grid-cols-2"
+      data-aos="fade-right"
     >
       {/* <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div> */}
       <div className="z-10 ">
@@ -62,12 +62,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div>
-        {emailSubmitted ? (
-          <p className="mt-2 text-sm text-green-500">
-            l&apos;email a été envoyé avec succès
-          </p>
-        ) : (
+      <div data-aos="fade-left">
+   
           <form className="flex flex-col" ref={form} onSubmit={sendEmail}>
             <div className="mb-6">
               <label
@@ -123,7 +119,7 @@ const Contact = () => {
               Envoyer le Message
             </button>
           </form>
-        )}
+  
       </div>
 
     </section>

@@ -1,11 +1,11 @@
-/* eslint-disable tailwindcss/no-custom-classname */
+
 "use client";
 import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import { Meteors } from "./ui/meteors";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Accueil = () => {
   return (
@@ -36,13 +36,16 @@ const Accueil = () => {
               repeat={Infinity}
             />
           </h1>
+
           <p className="z-[999] mb-6 text-base text-[#ADB7BE] sm:text-lg lg:text-xl">
              Je crée des sites web sur mesure pour magnifier votre présence en ligne, offrant une expérience web captivante et mémorable. 
           </p>
-          <div>
+
+          <div className="flex max-md:flex-col gap-5  justify-center items-center">
             <Link
                href="#contact"
-              className="mr-4 inline-block w-full cursor-pointer rounded-full bg-gradient-to-br from-purple-500 to-black px-6 py-3 text-white hover:bg-slate-200 sm:w-fit"
+              className="inline-block w-full cursor-pointer rounded-full bg-gradient-to-br from-purple-500 to-black px-6 py-3 text-white hover:bg-slate-200 sm:w-fit"
+            
             >
              Contactez moi
             </Link>
@@ -54,32 +57,31 @@ const Accueil = () => {
                href="/cv.pdf"  
               //  locale={false}
                 download
-              className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-purple-500 to-teal-500 p-1 text-white hover:bg-slate-900 sm:w-fit"
+              className="inline-block w-full rounded-full bg-gradient-to-br from-purple-500 to-teal-500 p-1 text-white hover:bg-slate-900 sm:w-fit"
             >
               <span className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800">
                 Télécharger mon CV
               </span>
             </a>
+            
             <div className='fixed left-0 top-[70%] flex flex-col gap-2 p-1 text-xl text-white'>
               {/* <p className='rounded-full bg-white p-2 text-red-400 shadow-2xl' ><GrInstagram />
                  </p > */}
+                 
            <Link  className='z-[999] animate-bounce cursor-pointer rounded-full bg-white p-2 text-black shadow-2xl' href="https://github.com/Israel-Okito">
              <FaGithub/>
            </Link>
-              {/* <p className='rounded-full bg-white p-2 text-blue-500 shadow-2xl' ><FaLinkedin/></p> */}
+           <Link  className='z-[999] animate-bounce cursor-pointer rounded-full bg-white p-2  text-blue-500  shadow-2xl' href="https://github.com/Israel-Okito">
+           <FaLinkedin/>
+           </Link>
         </div>
           </div>
         </div>
 
 
         <div
-        //  initial={{ opacity: 0, scale: 0.9 }}
-        //  animate={{ opacity: 1, scale: 1 }}
-        //  transition={{ duration: 0.1 }}
-              // initial={{ opacity: 0, scale: 0.5 }}
-              // animate={{ opacity: 1, scale: 1 }}
-              // transition={{ duration: 0.5 }}
-          className="col-span-4 mt-4 place-self-center     lg:mt-0 "
+    
+          className="col-span-4 mt-4 place-self-center lg:mt-0 "
         >
           <div className="relative size-[250px] rounded-full border-2   bg-gradient-to-br from-purple-500 to-teal-500 lg:size-[400px] ">
             <Image

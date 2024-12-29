@@ -55,14 +55,6 @@ const ProjectCard = ({ imgUrl,  techno, title, description, gitUrl, previewUrl, 
 
                         </span>
                      <DialogFooter>
-                        {/* <Link
-                           href={previewUrl }
-                           className={`${!previewUrl && 'overflow-hidden'}`}
-                           >
-                           <button className={`flex items-center gap-2 rounded bg-purple-500 p-4 text-white hover:bg-purple-800 ${!previewUrl && 'overflow-hidden'}`}>
-                           <EyeIcon className=" w-5 text-white"  />voir le projet
-                            </button>
-                        </Link> */}
 
                         {previewUrl ? (
                            <Link href={previewUrl}

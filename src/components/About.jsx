@@ -53,7 +53,7 @@ const About = () => {
     <section  data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
               data-aos-duration="800" 
-              className="mt-10 rounded-xl bg-white/95 text-black shadow-2xl shadow-white drop-shadow-2xl  " 
+              className="mt-10 rounded-xl bg-white/80 text-black shadow-2xl shadow-white drop-shadow-2xl  " 
               id="propos"
     >
       
@@ -66,7 +66,7 @@ const About = () => {
           />
         <div className="mt-4 flex h-full flex-col text-left md:mt-0">
           <h2 className="mb-4 text-3xl  font-bold">À propos de Moi</h2>
-          <p className="text-base lg:text-lg">
+          <p className="text-base lg:text-lg font-semibold">
               je suis un développeur web front-end basé à tunis en Tunisie . Je développe des applications Web complètes, 
              <span className="flex font-bold text-purple-900"><RiDoubleQuotesL/>Chaque grand design commence par une histoire encore meilleure.</span>
              Au cours  de mon parcours en tant que développeur web indépendant, je cultive une confiance tranquille et une curiosité naturelle. Mon engagement envers l&apos;excellence technique et ma passion pour l&apos;innovation m&apos;ont permis d&apos;aborder chaque projet avec un esprit ouvert, cherchant constamment à repousser les limites de mes compétences. 

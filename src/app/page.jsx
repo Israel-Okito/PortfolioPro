@@ -1,8 +1,8 @@
 
 "use client"
 import About from "@/components/About";
-import Accueil from "@/components/Accueil";
-import Contact from "@/components/Contact";
+import AccueilSection from "@/components/AccueilSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ProjetSection from "@/components/ProjetSection";
@@ -20,12 +20,12 @@ export default function Home() {
   return (
   <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
-    <div className="container mx-auto mt-24 px-5 py-4 sm:px-12">
-     <Accueil/>
+    <div className="container mx-auto px-5  sm:px-12">
+     {/* <Accueil/> */}
+     <AccueilSection/>
      <About />
      <ProjetSection/>
-     <Contact/>
-    
+    <ContactSection/>
     </div>
     <Footer /> 
   </main>

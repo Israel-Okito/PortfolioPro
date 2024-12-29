@@ -35,9 +35,8 @@ const navLinks = [
 const Navbar = () => {
 
   return (
-    // eslint-disable-next-line tailwindcss/migration-from-tailwind-2
-    <nav className="fixed inset-x-0 top-0 z-50 mx-auto border border-[#33353F] bg-[#121212] bg-opacity-100 ">
-      <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2 lg:py-4">
+    <nav className="fixed inset-x-0 top-0 z-50 mx-auto  bg-black/70 shadow-sm shadow-purple-500  backdrop-blur-md ">
+      <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2 ">
         <Link
           href={"/"}
           className=" font-semibold text-white"
@@ -106,7 +105,7 @@ const Navbar = () => {
                </a>
             </li>
             <li>
-                <Link href="#contact" className=" rounded bg-purple-500 px-8 py-2 text-lg text-white hover:bg-purple-800">Contact</Link>
+                <Link href="#contact" className=" rounded bg-gradient-to-br from-purple-500 to-teal-500 px-8 py-2 text-lg text-white">Contact</Link>
             </li>
           </ul>
         </div>
